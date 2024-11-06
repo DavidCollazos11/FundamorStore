@@ -8,7 +8,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { auth } from "../firebase/firebase";
-export const UserContext = createContext(null);
+export const UserContext = createContext();
 
 const UserProvider = (props) => {
   const [user, setUser] = useState(false);

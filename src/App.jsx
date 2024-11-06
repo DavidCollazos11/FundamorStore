@@ -3,9 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/NavBar";
 import Login from "./routes/Login";
 import Home from "./routes/Home";
-import Register from "./components/Register";
+import Register from "./routes/Register";
 import RequireAuth from "./components/RequireAuth";
-import PasswordReset from "./components/PasswordReset";
+import PasswordReset from "./routes/PasswordReset";
 import { UserContext } from "./context/UserProvider";
 import "./App.css"; 
 
