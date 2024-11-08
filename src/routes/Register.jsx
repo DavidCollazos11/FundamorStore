@@ -55,7 +55,7 @@ const Register = () => {
           
           <button type="submit" className="primary-button login-button">Enviar</button>
         </form>
-        <a href="index.html" className="subtitle">Volver a la página principal</a>
+        <a href="/home" className="subtitle">Volver a la página principal</a>
       </div>
     </div>
   );

@@ -15,6 +15,7 @@ const Navbar = () => {
 
   return (
     <>
+    <nav>
             {user ? (
                 <>
                     <NavLink to='/'>| Home |</NavLink>
@@ -23,18 +24,14 @@ const Navbar = () => {
 
             ) : (
                 <>
-                    <NavLink to='/routes/login'>| login |</NavLink>
-                    <NavLink to='/components/register'>| Register |</NavLink>
-
+                    <NavLink to='/home'>Inicio</NavLink>
+                    <NavLink to='/about'>About</NavLink>
+                    <NavLink to='/login'> Login </NavLink>
+                    <NavLink to='/register'> Register </NavLink>
                 </>
             )
             }
-
-
-
-
-
-
+    </nav>
         </>
 /*
     <nav>

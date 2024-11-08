@@ -46,9 +46,10 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <button type="submit" className="primary-button login-button">Enviar</button>
-          <a href="registro.html" className="primary-button_ login-button">Registrarse</a>
+          <p className="subtitle">¿Aun no tienes una cuenta?</p>
+          <a href="/register" className="primary-button_ login-button">Registrarse</a>
         </form>
-        <a href="password.html" className="subtitle">¿Olvidaste tu contraseña?</a>
+        <a href="/password-reset" className="subtitle">¿Olvidaste tu contraseña?</a>
       </div>
     </div>
   );

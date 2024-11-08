@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom';
 const About = () => {
   return (
     <>
-      <nav>
-        <Link to="/">Inicio</Link>
-        <Link to="/about" aria-current="page">About</Link>
-      </nav>
       <main>
         <div className="container">
           <div className="title">

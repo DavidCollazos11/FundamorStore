@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <>
-      <nav>
-        <Link to="/" aria-current="page">Inicio</Link>
-        <Link to="/about">About</Link>
-      </nav>
       <main>
         <div className="container">
           <div className="title">
@@ -23,14 +19,14 @@ const Home = () => {
             <div className="content2">
               <p>¿Quieres asegurar tu prenda favorita? Regístrate y mantente al tanto sobre las piezas más buscadas. ¡No te quedes sin la tuya!</p>
               <button className="register-button">
-                <Link to="/register">Regístrate</Link>
+                <Link to="/login">Iniciar Sesión</Link>
               </button>
             </div>
           </div>
         </div>
         <div className="content3">
           <p>Información de Contacto</p>
-          <p>Tel: </p>
+          <p>Tel: 316 5288330</p>
           <a href="https://www.instagram.com/fundamorcali/" className="subtitle">Instagram</a>
         </div>
       </main>
