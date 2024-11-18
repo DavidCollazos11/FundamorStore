@@ -18,7 +18,7 @@ const About = () => {
               <br /><br />
               Esto nos permite que cada donación sea de beneficio para las personas que las adquieren. Los ingresos que se obtienen permiten que las niñas, niños, adolescentes y familias beneficiarias de FUNDAMOR continúen recibiendo atención integral.
             </p>
-            <img className="imge" src="./img/pulguero1.jpeg" alt="Imagen de html basico" />
+            <img className="imge" src="https://fundamor.org/wp-content/uploads/2024/04/pulguero-fundamor.png" alt="Imagen del logo del pulguero" />
           </div>
           <div className="content">
             <h1>Propósitos y Beneficios</h1>
@@ -28,8 +28,13 @@ const About = () => {
               <li>Ofrecer artículos accesibles a personas de bajos recursos</li>
               <li>Garantizar atención integral a los beneficiarios de FUNDAMOR</li>
             </ul>
-            <img className="imge" src="./img/pulguero2.png" alt="Imagen del Formulario" />
+            <img className="imge" src="https://fundamor.org/wp-content/uploads/2024/04/0108af05-2b65-4cff-ac71-186630c70b86-3-1024x640.jpeg" alt="Imagen del Formulario" />
           </div>
+        </div>
+        <div className="content3">
+          <p>Información de Contacto</p>
+          <p>Tel: 316 5288330</p>
+          <a href="https://www.instagram.com/fundamorcali/" className="subtitle">Instagram</a>
         </div>
       </main>
     </>

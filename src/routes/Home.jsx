@@ -24,11 +24,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="content3">
-          <p>Información de Contacto</p>
-          <p>Tel: 316 5288330</p>
-          <a href="https://www.instagram.com/fundamorcali/" className="subtitle">Instagram</a>
-        </div>
       </main>
     </>
   );
