@@ -26,6 +26,7 @@ export const useFirestore = () => {
   };
 
   const addData = async ({ prenda, urlReferencia }) => {
+    console.log ("addData: ", prenda,urlReferencia)
     try {
       setLoading((prev) => ({ ...prev, addData: true }));
       const newDoc = {
