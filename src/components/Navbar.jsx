@@ -9,7 +9,7 @@ const Navbar = () => {
     try {
       await signOutUser();
     } catch (error) {
-      console.error("Error al cerrar sesión:", error.message); // Otras posibles propiedades del error
+      console.error("Error al cerrar sesión:", error.message); 
     }
 }
 

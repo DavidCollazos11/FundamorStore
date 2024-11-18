@@ -5,12 +5,12 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(""); // Para manejar errores
-  const [loading, setLoading] = useState(false); // Estado de carga
+  const [error, setError] = useState(""); 
+  const [loading, setLoading] = useState(false); 
   const { loginUser } = useContext(UserContext);
   const navigate = useNavigate();
 
-  // Validación simple de los campos
+
   const validateForm = () => {
     if (!email || !password) {
       setError("Por favor, llena todos los campos.");
@@ -22,19 +22,19 @@ const Login = () => {
   const handleSubmitLogin = async (e) => {
     e.preventDefault();
 
-    if (!validateForm()) return; // Si la validación falla, no continúa
+    if (!validateForm()) return; 
 
     try {
-      setLoading(true); // Activar estado de carga
+      setLoading(true); 
       await loginUser(email, password);
       console.log("Usuario logueado --> 🤞👌");
-      // Redirigir a una página después del login
+   
       navigate("/dashboard");
     } catch (error) {
       setError("Error al iniciar sesión. Revisa tus credenciales.");
-      console.log(error.code); // Mostrar error en consola para depuración
+      console.log(error.code); 
     } finally {
-      setLoading(false); // Desactivar estado de carga
+      setLoading(false); 
     }
   };
 

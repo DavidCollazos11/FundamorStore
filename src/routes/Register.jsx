@@ -1,25 +1,25 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "../context/UserProvider";
-import { useNavigate } from "react-router-dom"; // Necesario para redirigir después del registro
+import { useNavigate } from "react-router-dom"; 
 
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { registerUser } = useContext(UserContext);
-  const [errorMessage, setErrorMessage] = useState(""); // Para mostrar errores
-  const navigate = useNavigate(); // Para redirigir al usuario después de un registro exitoso
+  const [errorMessage, setErrorMessage] = useState(""); 
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Enviando datos -->", name, email, password);
     try {
-      await registerUser(email, password); // Llama a registerUser de UserProvider
-      navigate("/home"); // Redirige al usuario a la página principal o a donde quieras después del registro
+      await registerUser(email, password); 
+      navigate("/home"); 
     } catch (error) {
       console.log(error.code);
       setErrorMessage("Error al registrar, por favor intente nuevamente.");
-      // Aquí puedes manejar más errores específicos, usando el código de error
+
     }
   };
 
