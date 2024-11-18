@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useFirestore } from "../hooks/useFirestore";
 import { formValidate } from "../utils/formValidate";
 import { useForm } from "react-hook-form";
-import { erroresFirebase } from "../utils/erroresFirebase";
+import {erroresfirebase} from "../utils/erroresfirebase";
 
 const Home = () => {
   const [copy, setCopy] = useState({ prendaID: true });
