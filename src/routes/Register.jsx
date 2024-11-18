@@ -1,26 +1,32 @@
-import React, { useContext, useState } from 'react';
-import { UserContext } from '../context/UserProvider';
+import React, { useState, useContext } from "react";
+import { UserContext } from "../context/UserProvider";
+import { useNavigate } from "react-router-dom"; // Necesario para redirigir después del registro
 
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { registerUser } = useContext(UserContext);
+  const [errorMessage, setErrorMessage] = useState(""); // Para mostrar errores
+  const navigate = useNavigate(); // Para redirigir al usuario después de un registro exitoso
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Enviando datos -->", name, email, password);
     try {
-      await registerUser(email, password);
+      await registerUser(email, password); // Llama a registerUser de UserProvider
+      navigate("/home"); // Redirige al usuario a la página principal o a donde quieras después del registro
     } catch (error) {
       console.log(error.code);
+      setErrorMessage("Error al registrar, por favor intente nuevamente.");
+      // Aquí puedes manejar más errores específicos, usando el código de error
     }
   };
 
   return (
     <div className="login">
       <div className="container">
-        <img src="/Proyecto-DMW/img/fundamor.png" alt="uao-logo" className="uao-logo" />
+        <img src="https://fundamor.org/wp-content/uploads/2024/04/2024-05-09_14-38-49.png" alt="Logo Fundamor" className="uao-logo" />
         <h1 className="title">Regístrate</h1>
         <form onSubmit={handleSubmit} className="form">
           <label htmlFor="name" className="label">Nombre</label>
@@ -53,12 +59,13 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           
+          {errorMessage && <p className="error-message">{errorMessage}</p>} {/* Muestra el mensaje de error si existe */}
+          
           <button type="submit" className="primary-button login-button">Enviar</button>
         </form>
-        <a href="/home" className="subtitle">Volver a la página principal</a>
       </div>
     </div>
   );
 };
 
-export default Register;
+export default Register;

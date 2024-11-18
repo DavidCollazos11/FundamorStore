@@ -1,15 +1,17 @@
-import React, { useContext } from 'react'
-import { UserContext } from '../context/UserProvider'
-import { Navigate } from 'react-router-dom'
+import React, { useContext } from 'react';
+import { UserContext } from '../context/UserProvider';
+import { Navigate, Outlet } from 'react-router-dom';
 
 const RequireAuth = () => {
-    const {user} =useContext(UserContext)
+    const { user } = useContext(UserContext);
 
-    if(!user){
-        return<Navigate to='/login'></Navigate>
+    // Si no hay usuario autenticado, redirige a login
+    if (!user) {
+        return <Navigate to="/login" />;
     }
-  return  Children; 
-  
-}
 
-export default RequireAuth
+    // Si el usuario está autenticado, renderiza el contenido protegido
+    return <Outlet />;
+};
+
+export default RequireAuth;
